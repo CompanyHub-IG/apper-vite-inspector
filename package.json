@@ -1,5 +1,6 @@
 {
     "name": "@companyhub-ig/apper-vite-inspector",
+    "type": "module",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/companyhub-ig/apper-vite-inspector"
