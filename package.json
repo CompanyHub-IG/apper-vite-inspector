@@ -1,5 +1,7 @@
 {
     "name": "@companyhub-ig/apper-vite-inspector",
+    "version": "0.0.5",
+    "description": "Visual inspector and component tagger for Vite applications",
     "type": "module",
     "repository": {
         "type": "git",
@@ -9,19 +11,39 @@
         "access": "public",
         "registry": "https://npm.pkg.github.com/"
     },
-    "version": "0.0.5",
     "main": "./dist/index.umd.js",
     "module": "./dist/index.es.js",
-    "types": "./dist/index.d.ts",
     "exports": {
-        ".": "./dist/index.es.js"
+        ".": {
+            "import": "./dist/index.es.js",
+            "require": "./dist/index.umd.js"
+        }
     },
+    "files": [
+        "dist",
+        "src",
+        "README.md"
+    ],
     "scripts": {
         "dev": "vite build --watch",
         "build": "vite build",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "prepublishOnly": "npm run build"
     },
+    "keywords": [
+        "vite",
+        "inspector",
+        "component",
+        "tagger",
+        "development",
+        "tools"
+    ],
     "author": "Apper",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/companyhub-ig/apper-vite-inspector/issues"
+    },
+    "homepage": "https://github.com/companyhub-ig/apper-vite-inspector#readme",
     "dependencies": {
         "@babel/parser": "^7.25.9",
         "estree-walker": "^3.0.3",
@@ -35,5 +57,8 @@
     },
     "peerDependencies": {
         "vite": "^6.0.0"
+    },
+    "engines": {
+        "node": ">=18.0.0"
     }
 }
